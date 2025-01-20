@@ -1,0 +1,230 @@
+body {
+    display: flex;
+    /* margin-top: 32px; */
+    align-items: center;
+    /* justify-content: space-between; */
+    font-family: sans-serif;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    max-width: 920px;
+}
+
+#ad-unit {
+    width: 65%;
+    margin: auto;
+}
+
+#buttons button {
+    width: 50%;
+    border-radius: 0;
+    border: thin solid #353535;
+    background-color: black;
+    transition: all 300ms;
+}
+
+#buttons button:hover {
+    transition: all 300ms;
+    background-color: white;
+    color: black;
+}
+
+
+#spin-wheel {
+    /* background-color: #000000; */
+    background-color: #8f8561;
+    font-size: 1.45em;
+    height: 3em;
+    width: 100%;
+}
+
+#buttons {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+#wedge-list {
+    flex-grow: 0;
+    overflow: auto;
+    height: 350px;
+    border-radius: 4px 4px 0 0;
+    /* border: thin solid #eaeaea; */
+    border: thin solid rgb(238, 108, 77,.7);
+    box-shadow: inset 0 0 2px 1px rgba(151, 151, 151, 0.09);
+}
+
+
+.name-entry button {
+    border-radius: 0;
+}
+
+.remove-wedge {
+    background-color: #8e8e8e;
+}
+
+.right-pane {
+    /* border: 4px solid rgba(255,182,193,.5); */
+    border: 4px solid rgb(238, 108, 77,.7);
+    border-radius: 8px 8px 0 0;
+    padding: 8px;
+    margin: 8px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 256px;
+}
+
+
+#canvas {
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border: 3px solid #fff;
+    border-radius: 300px;
+    width: 512px;
+    height: 512px;
+}
+
+
+/*Label With Action*/
+.labeled-action {
+    margin: 8px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.12);
+    text-overflow: ellipsis;
+    border: 1px solid rgba(255,182,193,.8);
+}
+.list-item,.name-entry{
+    background-color:rgb(238, 108, 77,.5);
+    color: #fff;
+}
+.labeled-action div {
+    padding: 8px;
+    text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.labeled-action input {
+    padding-left: 4px;
+    font-size: 14px;
+    border-style: none;
+    flex-grow: .7;
+    background-color: transparent;
+}
+
+input:focus {
+    outline: none;
+}
+
+.labeled-action button {
+    height: 32px;
+    width: 32px;
+    /* background-color: #000000; */
+    background-color: #8f8561;
+    color: white;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    border-style: none;
+    flex-shrink: 0;
+}
+
+.labeled-action button:active {
+    outline: none;
+    box-shadow: inset 0 3px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.labeled-action button:focus {
+    outline: none;
+}
+
+.labeled-action button:hover {
+    transition: all 300ms;
+    background-color: white;
+    color: black;
+    border: thin solid black;
+}
+
+.footer {
+    margin-top: 16px;
+    opacity: .5;
+    text-decoration: none;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.canvas_contain{
+    position: relative;
+}
+.little_dog{
+    position: absolute;
+    top: -95px;
+    left: 208px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    background:no-repeat center/100% 100% url('../littledog.png');
+}
+@media (max-width: 425px) {
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100VW !important;
+        height: auto;
+        margin-top: 58px!important;
+        max-width: initial !important;
+        background:no-repeat center/100% 100% url('../dog.jpg');
+    }
+
+    #canvas {
+        width: 90vw;
+        height: 90vw;
+        border: 3px solid rgb(255, 255, 255,.7);
+    }
+
+    .right-pane {
+        width: 85%;
+        margin: 15px 0;
+        background-color: rgb(255, 255, 255,.7);
+        border: none;
+        background-color: rgb(255, 255, 255,.7);
+    }
+
+    #wedge-list {
+        height: 256px;
+    }
+
+    #spin-wheel {
+        background-color: #FFB6C1;
+    }
+    
+    .labeled-action button {
+        background-color: #FFB6C1;
+    }
+    .little_dog{
+        display: none;
+    }
+}
